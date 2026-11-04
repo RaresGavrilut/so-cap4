@@ -1,0 +1,12 @@
+#!/bin/bash
+# Problema 2 - comand1
+# Primeste 2 parametri: S (subdirector) si FILE (fisier fara extensie).
+# Creeaza S, intra in S, apeleaza OPTIUNE si, in functie de valoare:
+#   1 - creeaza prin copiere de la tastatura FILE.TXT
+#   2 - sorteaza FILE.TXT in FILE.SRT
+#   3 - afiseaza FILE.SRT
+# Daca valoarea e diferita de 0, apeleaza din nou OPTIUNE.
+# La final afiseaza directorul curent si revine in directorul parinte.
+
+# Scrieti solutia mai jos:
+

@@ -1,0 +1,9 @@
+# Executabile compilate (se trimite doar codul sursa)
+OPTIUNE
+*.o
+*.out
+
+# Directoarele si fisierele create la rulare de comand1
+ex02/*/
+ex03-*/*/
+*.SRT

@@ -1,0 +1,8 @@
+#!/bin/bash
+# Problema 4 - comand3
+# Primeste ca parametru numele unui subdirector S pe care il sterge
+# impreuna cu toate fisierele pe care le contine.
+# Se presupune ca S nu contine alte subdirectoare.
+
+# Scrieti solutia mai jos:
+

@@ -1,0 +1,3 @@
+# Scripturile shell TREBUIE sa aiba terminatii de linie Unix (LF).
+# Cu terminatii Windows (CRLF) apare eroarea: /bin/bash^M: bad interpreter
+* text=auto eol=lf
