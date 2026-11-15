@@ -36,3 +36,4 @@ La terminare, folosind redirecționarea întreruperilor, să se facă toate oper
 **7.** Scrieți un fișier de comenzi care să șteargă din directorul curent toate fișierele care au extensie identică cu cea primită de fișierul de comenzi ca parametru. Fișierul de comenzi poate să accepte mai multe extensii deodată.
 
 **8.** Realizați un fișier de comenzi care primește ca parametru o extensie și să afișeze toate fișierele care au extensia identică cu cea primită ca parametru.
+# so-cap4
