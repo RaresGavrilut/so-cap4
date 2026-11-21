@@ -3,4 +3,6 @@
 # Apeleaza comand1 cu diferite valori pentru parametri.
 
 # Scrieti solutia mai jos:
+./comand1 sub1 fisier1
+./comand1 sub2 fisier2
 
