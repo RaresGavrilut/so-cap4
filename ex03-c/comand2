@@ -3,4 +3,11 @@
 # Transmite datele lui comand1 prin variabilele interpretorului.
 
 # Scrieti solutia mai jos:
+export S="sub1"
+export FILE="fisier1"
+. ./comand1
+
+export S="sub2"
+export FILE="fisier2"
+. ./comand1
 
