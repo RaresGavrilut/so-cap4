@@ -3,4 +3,47 @@
 # Isi ia datele din variabilele interpretorului.
 
 # Scrieti solutia mai jos:
+if [ -z "$S" ] || [ -z "$FILE" ]; then
+    echo "Seteaza variabilele S si FILE inainte de rulare (ex: export S=sub1 FILE=fis1)."
+    exit 1
+fi
+
+mkdir -p "$S"
+cd "$S" || exit 1
+
+./OPTIUNE
+opt=$?
+
+while [ "$opt" -ne 0 ]; do
+    case "$opt" in
+        1)
+            echo "Introduceti continutul pentru ${FILE}.TXT (Ctrl+D pentru a termina):"
+            cat > "${FILE}.TXT"
+            ;;
+        2)
+            if [ -e "${FILE}.TXT" ]; then
+                sort "${FILE}.TXT" > "${FILE}.SRT"
+                echo "Sortat in ${FILE}.SRT"
+            else
+                echo "Eroare: fisierul ${FILE}.TXT nu exista!"
+            fi
+            ;;
+        3)
+            if [ -e "${FILE}.SRT" ]; then
+                cat "${FILE}.SRT"
+            else
+                echo "Eroare: fisierul ${FILE}.SRT nu exista!"
+            fi
+            ;;
+        *)
+            echo "Optiune necunoscuta: $opt"
+            ;;
+    esac
+
+    ./OPTIUNE
+    opt=$?
+done
+
+pwd
+cd ..
 
