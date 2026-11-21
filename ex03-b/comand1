@@ -3,4 +3,50 @@
 # Face verificari de existenta a fisierelor daca OPTIUNE returneaza 2 sau 3.
 
 # Scrieti solutia mai jos:
+S="$1"
+FILE="$2"
 
+if [ -z "$S" ] || [ -z "$FILE" ]; then
+    echo "Utilizare: $0 S FILE"
+    exit 1
+fi
+
+mkdir -p "$S"
+cd "$S" || exit 1
+
+./OPTIUNE
+opt=$?
+
+while [ "$opt" -ne 0 ]; do
+    case "$opt" in
+        1)
+            echo "Introduceti continutul pentru ${FILE}.TXT (Ctrl+D pentru a termina):"
+            cat > "${FILE}.TXT"
+            ;;
+        2)
+            if [ -e "${FILE}.TXT" ]; then
+                sort "${FILE}.TXT" > "${FILE}.SRT"
+                echo "Fisierul ${FILE}.TXT exista. Sortat in ${FILE}.SRT"
+            else
+                echo "Eroare: fisierul ${FILE}.TXT nu exista!"
+            fi
+            ;;
+        3)
+            if [ -e "${FILE}.SRT" ]; then
+                echo "Fisierul ${FILE}.SRT exista. Continut:"
+                cat "${FILE}.SRT"
+            else
+                echo "Eroare: fisierul ${FILE}.SRT nu exista!"
+            fi
+            ;;
+        *)
+            echo "Optiune necunoscuta: $opt"
+            ;;
+    esac
+
+    ./OPTIUNE
+    opt=$?
+done
+
+pwd
+cd ..
