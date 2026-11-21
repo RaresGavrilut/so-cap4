@@ -5,4 +5,18 @@
 # Se presupune ca S nu contine alte subdirectoare.
 
 # Scrieti solutia mai jos:
+S="$1"
+
+if [ -z "$S" ]; then
+    echo "Utilizare: $0 S"
+    exit 1
+fi
+
+if [ ! -d "$S" ]; then
+    echo "Directorul $S nu exista."
+    exit 1
+fi
+
+rm -f "$S"/* "$S"/.* 2>/dev/null
+rmdir "$S"
 
